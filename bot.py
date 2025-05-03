@@ -31,5 +31,5 @@ async def fetch(ctx, key: str, filename: str):
             await ctx.send("File was not found in content directory after fetch.")
     else:
         await ctx.send(f"Failed to fetch file. Server responded with: {res.status_code} - {res.text}")
-tkn = os.get("Token")
+tkn = os.getenv("token")
 bot.run(tkn)
